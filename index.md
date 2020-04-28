@@ -2,7 +2,9 @@ Hello and welcome to this blog. Edit the `index.md` file to change this content.
 
 $$
 \sum_n (x)
-  Hello World!
+\begin{equation}
+  f(x) = x^2
+\end{equation}
 $$
 
 ## This is a title
