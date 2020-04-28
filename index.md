@@ -1,10 +1,8 @@
 Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
 
 $$
-\documentclass{article}
 \sum_n (x)
   Hello World!
-\end{document}
 $$
 
 ## This is a title
