@@ -2,9 +2,8 @@ Hello and welcome to this blog. Edit the `index.md` file to change this content.
 
 $$
 \sum_n (x)
-\begin{equation}
-  f(x) = x^2
-\end{equation}
+f(x) = x^2
+F(x) &= \int^a_b \frac{1}{3}x^3
 $$
 
 ## This is a title
