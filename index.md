@@ -2,7 +2,7 @@ Hello and welcome to this blog. Edit the `index.md` file to change this content.
 
 $$
 \documentclass{article}
-\begin{document}
+\sum_n (x)
   Hello World!
 \end{document}
 $$
