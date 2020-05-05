@@ -10,13 +10,14 @@ The forward algorithm uses Dynamic Programming ro decrease computational complex
 
 We know $p(z_{k},x_{1:k})$ is the marginal distribution over the subset $(z_{k},x_{1:k})$ and that marginalization is the process of summming the joint distribution over all values of the variable or variables being discarded. So we will make that summation explicit in order to get $z_{k-1}$ back:
 
-
-$p(z_k,x_{1:k}) =\sum_z_{k-1} p(z_k,z_{k-1},x_{1:k})$
+$$
+p(z_{k},x_{1:k}) =\sum_{z_{k-1}} p(z_{k},z_{k-1},x_{1:k})
+$$
 
 Next, we are going to expand this join probability into the following by using the chain rule of probability:
 
 $$
-\sum_z_{k-1} p(z_{k},Z_{k-1},x_{1:k})=\sum_z_{k-1} p(x_{k}\|z_{k},z_{k-1},x_{1:k-1})p(z_{k}\|z_{k-1},x_{1:k-1})p(z_{k-1},x_{1:k-1})
+\sum_{z_{k-1}} p(z_{k},Z_{k-1},x_{1:k})=\sum_{z_{k-1}} p(x_{k}\|z_{k},z_{k-1},x_{1:k-1})p(z_{k}\|z_{k-1},x_{1:k-1})p(z_{k-1},x_{1:k-1})
 $$
 
 Then you probably start to see the pattern, where now our computation has become recursive and our joint probability depends now on the joint probability one step back.
@@ -26,16 +27,16 @@ One thing about Hidden Markov Models is its Markov property and we can use that 
 So our equation ends up like this:
 
 $$
-p(z_{k},x_{1:k}) = \sum_z_{k-1} p(x_{k}\|z_{k})p(z_{k}\|z_{k-1})p(z_{k-1},x_{1:k-1})
+p(z_{k},x_{1:k}) = \sum_{z_{k-1}} p(x_{k}\|z_{k})p(z_{k}\|z_{k-1})p(z_{k-1},x_{1:k-1})
 $$
 
 So now we can check what we have got so far. The first term $p(x_{k}\|z_{k})$ is known and the second term $p(z_{k}\|z_{k-1})$ as well being the first one the emission probability and the second one the transition probability.
 
 Let us rewrite the equation as follows:
 
-$$
-\alpha_k(z_k) = \sum_z_{k-1} p(x_k\|z_k)p(z_k\|z_{k-1})\alpha_{k-1}) for k=2,...,n
-$$
+
+$\alpha_k(z_k) = \sum_{z_{k-1}} p(x_k\|z_k)p(z_k\|z_{k-1})\alpha_{k-1})$ for $k=2,...,n$
+
 
 The only thing left is defining $\alpha_1 = p(z_1,x_1) = p(z_1)p(x_1\|z_1)$
 where $p(z_1)$ is the initial distribution.
