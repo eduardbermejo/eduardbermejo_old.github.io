@@ -9,7 +9,7 @@ We assume we know the emission probability distribution $p(X_{k}\|Z_{k})$ and th
 The forward algorithm uses Dynamic Programming ro decrease computational complexity. So the first thing we need to do is to find a way to state that recursion. What we could do is explicitly add the previous hidden random variable back like so:
 We know $p(Z_{k},X_{1:k})$ is the marginal distribution over the subset $(Z_{k},X_{1:k})$ and since we know that marginalization is the process of summming the joint distribution over the variable or variables being discarded. So we will make that summation explicit in order to get $Z_{k-1}$ back:
 
-$p(Z_{k},X_{1:k})=sum_k p(Z_{k},Z_{k-1},X_{1:k}})
+$p(Z_{k},X_{1:k})=sum_k p(Z_{k},Z_{k-1},X_{1:k}})$
 
 
 
