@@ -10,6 +10,8 @@ The forward algorithm uses Dynamic Programming ro decrease computational complex
 
 We know $p(Z_{k},X_{1:k})$ is the marginal distribution over the subset $(Z_{k},X_{1:k})$ and since we know that marginalization is the process of summming the joint distribution over the variable or variables being discarded. So we will make that summation explicit in order to get $Z_{k-1}$ back:
 
+$p(Z_{k},X_{1:k})$
+
 $p(Z_{k},X_{1:k})=\sum_Z{k-1} p(Z_{k},Z_{k-1},X_{1:k}})$
 
 
