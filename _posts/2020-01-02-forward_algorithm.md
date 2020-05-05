@@ -12,7 +12,7 @@ We know $p(Z_{k},X_{1:k})$ is the marginal distribution over the subset $(Z_{k},
 
 $p(Z_{k},X_{1:k})$
 
-$p(Z_{k},X_{1:k}) =\sum_n (p(Z_{k},Z_{k-1},X_{1:k}))$
+$p(Z_{k},X_{1:k}) =\sum_Z_{k-1} p(Z_{k},Z_{k-1},X_{1:k})$
 
 
 
