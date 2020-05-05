@@ -11,7 +11,7 @@ The forward algorithm uses Dynamic Programming ro decrease computational complex
 We know $p(z_{k},x_{1:k})$ is the marginal distribution over the subset $(z_{k},x_{1:k})$ and that marginalization is the process of summming the joint distribution over all values of the variable or variables being discarded. So we will make that summation explicit in order to get $z_{k-1}$ back:
 
 
-$p(z_k,x_{1:k}) =\sum_z_{k-1} p(z_k,z_{k-1},x_{1:k})$
+$p(z_k,x_{1:k}) =\sum_z p(z_k,z_{k-1},x_{1:k})$
 
 Next, we are going to expand this join probability into the following by using the chain rule of probability:
 
