@@ -34,8 +34,9 @@ So now we can check what we have got so far. The first term $p(x_{k}\|z_{k})$ is
 
 Let us rewrite the equation as follows:
 
-
-$\alpha_k(z_k) = \sum_{z_{k-1}} p(x_k\|z_k)p(z_k\|z_{k-1})\alpha_{k-1})$ for $k=2,...,n$
+$$
+\alpha_k(z_k) = \sum_{z_{k-1}} p(x_k\|z_k)p(z_k\|z_{k-1})\alpha_{k-1})\quad for \quad k=2,...,n
+$$
 
 
 The only thing left is defining $\alpha_1 = p(z_1,x_1) = p(z_1)p(x_1\|z_1)$
