@@ -17,7 +17,7 @@ $$
 Next, we are going to expand this join probability into the following by using the chain rule of probability:
 
 $$
-\sum_{z_{k-1}} p(z_{k},Z_{k-1},x_{1:k})=\sum_{z_{k-1}} p(x_{k}\|z_{k},z_{k-1},x_{1:k-1})p(z_{k}\|z_{k-1},x_{1:k-1})p(z_{k-1},x_{1:k-1})
+\sum_{z_{k-1}} p(z_{k},Z_{k-1},x_{1:k})=\sum_{z_{k-1}} p(x_{k}|z_{k},z_{k-1},x_{1:k-1})p(z_{k}|z_{k-1},x_{1:k-1})p(z_{k-1},x_{1:k-1})
 $$
 
 Then you probably start to see the pattern, where now our computation has become recursive and our joint probability depends now on the joint probability one step back.
@@ -27,7 +27,7 @@ One thing about Hidden Markov Models is its Markov property and we can use that 
 So our equation ends up like this:
 
 $$
-p(z_{k},x_{1:k}) = \sum_{z_{k-1}} p(x_{k}\|z_{k})p(z_{k}\|z_{k-1})p(z_{k-1},x_{1:k-1})
+p(z_{k},x_{1:k}) = \sum_{z_{k-1}} p(x_{k}|z_{k})p(z_{k}|z_{k-1})p(z_{k-1},x_{1:k-1})
 $$
 
 So now we can check what we have got so far. The first term $p(x_{k}\|z_{k})$ is known and the second term $p(z_{k}\|z_{k-1})$ as well being the first one the emission probability and the second one the transition probability.
@@ -35,7 +35,7 @@ So now we can check what we have got so far. The first term $p(x_{k}\|z_{k})$ is
 Let us rewrite the equation as follows:
 
 $$
-\alpha_k(z_k) = \sum_{z_{k-1}} p(x_k\|z_k)p(z_k\|z_{k-1})\alpha_{k-1})\quad for \quad k=2,...,n
+\alpha_k(z_k) = \sum_{z_{k-1}} p(x_k|z_k)p(z_k|z_{k-1})\alpha_{k-1})\quad for \quad k=2,...,n
 $$
 
 
