@@ -5,6 +5,7 @@ In the image below we can see the probabilistic graphical model depicting a hidd
 
 <img src="/images/HMM.png" style="border:0;" title="Hidden Markov Model">
 
+
 Our goal is to compute: $p(z_k,x_{1:k})$ where $x_{1:k}=(x_1,...,x_k)$
 
 We assume we know the emission probability distribution $p(x_{k}\|z_{k})$ and the transition probability distribution $p(z_{k}\|z_{k-1})$
